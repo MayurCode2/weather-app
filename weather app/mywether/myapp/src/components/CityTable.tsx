@@ -21,7 +21,7 @@ interface CityTableProps {
 const CityTable: React.FC<CityTableProps> = ({ cities }) => {
   const [searchValue, setSearchValue] = useState("");
   const [cityList, setCityList] = useState<City[]>(cities?.results || []);
-  const [rowsLimit, setRowsLimit] = useState(10);
+  const [rowsLimit, ] = useState(10);
   const [rowsToShow, setRowsToShow] = useState(cityList.slice(0, rowsLimit));
   const [customPagination, setCustomPagination] = useState<number[]>([]);
   const [activeColumn, setActiveColumn] = useState("");
@@ -200,7 +200,7 @@ const CityTable: React.FC<CityTableProps> = ({ cities }) => {
         >
           Previous
         </button>
-        {customPagination.map((item, index) => (
+        {customPagination.map((index) => (
           <button
             key={index}
             className={`pagination-btn ${

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Search from "./search/Search";
 import CurrentWeather from "./current-weather/CurrentWeather";
 import Forecast from "./forecast/Forecast";
@@ -42,7 +42,7 @@ function SearchPage() {
     JSON.parse(localStorage.getItem("favoriteLocations") || "[]")
   );
   const  WEATHER_API_URL = "https://api.openweathermap.org/data/2.5";
-   const WEATHER_API_KEY = "148839248e1798fa4c03d61c3a212170";
+   const WEATHER_API_KEY = "8e16100c36cd3f8d18929681504951c3";
   
 
   const handleOnSearchChange = (searchData: Location) => {

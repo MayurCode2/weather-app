@@ -1,16 +1,24 @@
 import React, { useState } from "react";
-import { AsyncPaginate } from "react-select-async-paginate";
+import { AsyncPaginate, LoadOptions } from "react-select-async-paginate";
 
-const Search = ({ onSearchChange }) => {
-  const [search, setSearch] = useState(null);
+interface Location {
+  label: string;
+  value: string;
+}
 
-  const loadOptions = (inputValue) => {
+interface SearchProps {
+  onSearchChange: (searchData: Location) => void;
+}
+
+const Search: React.FC<SearchProps> = ({ onSearchChange }) => {
+  const [search, setSearch] = useState<Location | null>(null);
+
+  const loadOptions: LoadOptions<Location> = (inputValue) => {
     return fetch(
       `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?where=name%20like%20%27${inputValue}%25%27&limit=100&lang=en&timezone=Asia%2FKolkata&refine=timezone%3A%22Asia%22&refine=feature_code%3A%22PPL%22`
     )
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         return {
           options: response.results.map((city) => {
             return {
@@ -23,9 +31,11 @@ const Search = ({ onSearchChange }) => {
       .catch((error) => console.log(error));
   };
 
-  const handleOnChange = (searchData) => {
+  const handleOnChange = (searchData: Location | null) => {
     setSearch(searchData);
-    onSearchChange(searchData);
+    if (searchData) {
+      onSearchChange(searchData);
+    }
   };
 
   return (

@@ -14,7 +14,7 @@ const Spage = () => {
   const [currentWeather, setCurrentWeather] = useState<any>(null);
   const [forecast, setForecast] = useState<any>(null);
   const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5";
-   const WEATHER_API_KEY = "148839248e1798fa4c03d61c3a212170";
+   const WEATHER_API_KEY = "8e16100c36cd3f8d18929681504951c3";
   
   useEffect(() => {
     if (geoid) {
