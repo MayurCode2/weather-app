@@ -24,7 +24,6 @@ This is a weather application that allows users to view weather information for 
 - Implement search as you type with autocomplete suggestions.
 - Implement filter and sorting for each column.
 - Clicking on a city name should take the user to the weather page for that city.
-- Right-clicking on a city name and opening in a new tab should also open the weather page for the city in the new tab.
 
 ### Weather Page
 
