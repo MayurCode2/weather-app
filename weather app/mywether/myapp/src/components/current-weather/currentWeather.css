@@ -1,0 +1,146 @@
+/* Beautiful and Sophisticated CSS Styling */
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #666;
+  --background-color: #f9f9f9;
+  --gradient-start: #f9f9f9;
+  --gradient-end: #e9e9e9;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --font-family: 'Roboto', sans-serif;
+  --highlight-color: #ff6347;
+ }
+ 
+ body {
+  font-family: var(--font-family);
+ }
+ 
+ .weatherCard {
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px var(--shadow-color);
+  color: var(--primary-color);
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  margin: 20px auto 0 auto;
+  position: relative;
+  overflow: hidden;
+ }
+ 
+ .backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+ }
+ 
+ .weatherCardTop,
+ .weatherCardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+ }
+ 
+ .cityName {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+  color: var(--highlight-color);
+ }
+ 
+ .weatherDescription {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  color: var(--secondary-color);
+ }
+ 
+ .weatherIcon {
+  width: 60px;
+  height: 60px;
+ }
+ 
+ .temperatureDisplay {
+  font-weight: 600;
+  font-size: 72px;
+  width: auto;
+  letter-spacing: -5px;
+  margin: 10px 0;
+  color: var(--highlight-color);
+ }
+ 
+ .weatherDetails {
+  width: 100%;
+  padding-left: 20px;
+ }
+ 
+ .weatherParameterRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+ }
+ 
+ .weatherParameterLabel {
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--secondary-color);
+ }
+ 
+ .weatherParameterValue {
+  text-align: right;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary-color);
+ }
+ 
+ /* Responsive Design */
+ @media screen and (max-width: 500px) {
+  .weatherCard {
+     width: 100%;
+  }
+ }
+ 
+ /* Advanced Typography and Animations */
+ @keyframes fadeIn {
+  from {
+     opacity: 0;
+     transform: translateY(10px);
+  }
+  to {
+     opacity: 1;
+     transform: translateY(0);
+  }
+ }
+ 
+ .weatherCard,
+ .weatherParameterRow {
+  animation: fadeIn 0.5s ease-out;
+ }
+ 
+ /* Enhanced Shadows and Borders */
+ .weatherCard {
+  border: 1px solid #ddd;
+ }
+ 
+ .weatherParameterRow {
+  border-bottom: 2px solid #ddd;
+ }
+ 
+ /* Subtle Gradient Background */
+ .weatherCard {
+  background: linear-gradient(135deg, var(--gradie  nt-start), var(--gradient-end));
+ }
+ 
+ /* Highlight Color for Important Elements */
+ .cityName,
+ .temperatureDisplay {
+  color: var(--highlight-color);
+ }
+ 

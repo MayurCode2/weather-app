@@ -1,0 +1,133 @@
+.city-table-container {
+    min-height: 100vh;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f2f2f2;
+    padding: 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    border-bottom: 2px solid #000000;
+  }
+  
+  .search-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 0.375rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .search-input {
+    max-width: 150px;
+    min-width: 120px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.875rem;
+    color: #000000;
+    width: 85%;
+    padding: 0.25rem 0;
+  }
+  
+  .search-clear {
+    color: #000000;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  .table-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    overflow-x: scroll;
+  }
+  
+  .city-table {
+    width: 100%;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    border-collapse: collapse;
+  }
+  
+  .city-table th,
+  .city-table td {
+    padding: 0.75rem 0.75rem;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  
+  .city-table th {
+    background-color: #212b36;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+  
+  .th-header-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .th-name-sort,
+  .th-population-sort {
+    cursor: pointer;
+    padding-left: 0.25rem;
+  }
+  
+  .th-name-sort.active,
+  .th-population-sort.active {
+    color: #000000;
+  }
+  
+  .th-sort-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .th-sort-wrapper h2 {
+    margin-right: 0.75rem;
+  }
+  
+  .table-row:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .td-name a {
+    color: #000000;
+    text-decoration: underline;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    overflow-x: auto;
+  }
+  
+  .pagination-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.375rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+  
+  .pagination-btn.active {
+    background-color: #585858;
+    color: #ffffff;
+  }
+  
+  .pagination-btn.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
